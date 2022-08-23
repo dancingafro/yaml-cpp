@@ -9,15 +9,19 @@ project "yaml-cpp"
 	{
 		"src/**.h",
 		"src/**.cpp",
-		
 		"include/**.h"
 	}
-
+	
 	includedirs
 	{
 		"include"
 	}
 
+    defines
+    {
+		"YAML_CPP_STATIC_DEFINE"
+    }
+    
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
